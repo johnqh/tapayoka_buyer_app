@@ -1,8 +1,10 @@
+import { CONSTANTS } from '../config/constants';
+
 export function LandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <header className="max-w-4xl mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-gray-900">Tapayoka</h1>
+        <h1 className="text-4xl font-bold text-gray-900">{CONSTANTS.APP_NAME}</h1>
       </header>
       <main className="max-w-4xl mx-auto px-4 py-16 text-center space-y-8">
         <h2 className="text-5xl font-bold text-gray-900">Cashless Payments for Any Device</h2>
@@ -26,7 +28,7 @@ export function LandingPage() {
         </div>
         <section className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16">
           {[
-            { title: 'Scan', desc: 'Point your camera at the QR code on any Tapayoka-enabled device.' },
+            { title: 'Scan', desc: `Point your camera at the QR code on any ${CONSTANTS.APP_NAME}-enabled device.` },
             { title: 'Pay', desc: 'Securely pay with your card. No cash, no coins, no hassle.' },
             { title: 'Activate', desc: 'The device starts automatically. Track time remaining in the app.' },
           ].map(f => (
@@ -38,7 +40,7 @@ export function LandingPage() {
         </section>
       </main>
       <footer className="max-w-4xl mx-auto px-4 py-8 text-center text-gray-500 text-sm">
-        &copy; {new Date().getFullYear()} Tapayoka
+        &copy; {new Date().getFullYear()} {CONSTANTS.APP_NAME}
       </footer>
     </div>
   );

@@ -1,4 +1,8 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
+
+vi.mock('@sudobility/building_blocks', () => ({
+  AppFooterForHomePage: () => null,
+}));
 
 describe('tapayoka_buyer_app', () => {
   it('has defined app entry', async () => {

@@ -1,3 +1,4 @@
+import { AppFooterForHomePage } from '@sudobility/building_blocks';
 import { CONSTANTS } from '../config/constants';
 
 export function LandingPage() {
@@ -39,9 +40,12 @@ export function LandingPage() {
           ))}
         </section>
       </main>
-      <footer className="max-w-4xl mx-auto px-4 py-8 text-center text-gray-500 text-sm">
-        &copy; {new Date().getFullYear()} {CONSTANTS.APP_NAME}
-      </footer>
+      <AppFooterForHomePage
+        logo={{ appName: CONSTANTS.APP_NAME }}
+        linkSections={[]}
+        companyName={CONSTANTS.COMPANY_NAME}
+        companyUrl={`https://${CONSTANTS.APP_DOMAIN}`}
+      />
     </div>
   );
 }

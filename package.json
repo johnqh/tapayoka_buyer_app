@@ -1,7 +1,7 @@
 {
   "name": "tapayoka_buyer_app",
   "private": true,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "scripts": {
     "process:static": "curl -sL https://raw.githubusercontent.com/johnqh/workflows/main/scripts/process-static-files.ts -o /tmp/process-static-files.ts && bunx tsx /tmp/process-static-files.ts",
@@ -14,12 +14,12 @@
   },
   "dependencies": {
     "@sudobility/building_blocks": "^0.0.150",
-    "@sudobility/components": "^5.0.18",
-    "@sudobility/design": "^1.1.21",
-    "@sudobility/di": "^1.5.43",
+    "@sudobility/components": "^5.0.19",
+    "@sudobility/design": "^1.1.22",
+    "@sudobility/di": "^1.5.44",
     "@sudobility/di_web": "^0.1.118",
     "@sudobility/subscription_lib": "^0.0.19",
-    "@sudobility/types": "^1.9.55",
+    "@sudobility/types": "^1.9.56",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "firebase": "^12.10.0",

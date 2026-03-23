@@ -1,7 +1,7 @@
 {
   "name": "tapayoka_buyer_app",
   "private": true,
-  "version": "0.0.23",
+  "version": "0.0.24",
   "type": "module",
   "scripts": {
     "process:static": "curl -sL https://raw.githubusercontent.com/johnqh/workflows/main/scripts/process-static-files.ts -o /tmp/process-static-files.ts && bunx tsx /tmp/process-static-files.ts",
@@ -21,7 +21,7 @@
     "@sudobility/di": "^1.5.48",
     "@sudobility/di_web": "^0.1.133",
     "@sudobility/subscription_lib": "^0.0.34",
-    "@sudobility/tapayoka_types": "^0.0.28",
+    "@sudobility/tapayoka_types": "^0.0.30",
     "@sudobility/types": "^1.9.59",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

@@ -1,7 +1,7 @@
 {
   "name": "tapayoka_buyer_app",
   "private": true,
-  "version": "0.0.25",
+  "version": "0.0.26",
   "type": "module",
   "scripts": {
     "process:static": "curl -sL https://raw.githubusercontent.com/johnqh/workflows/main/scripts/process-static-files.ts -o /tmp/process-static-files.ts && bunx tsx /tmp/process-static-files.ts",
@@ -15,14 +15,14 @@
     "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json}\""
   },
   "dependencies": {
-    "@sudobility/building_blocks": "^0.0.168",
-    "@sudobility/components": "^5.0.25",
-    "@sudobility/design": "^1.1.23",
-    "@sudobility/di": "^1.5.48",
-    "@sudobility/di_web": "^0.1.133",
-    "@sudobility/subscription_lib": "^0.0.34",
-    "@sudobility/tapayoka_types": "^0.0.32",
-    "@sudobility/types": "^1.9.59",
+    "@sudobility/building_blocks": "^0.0.169",
+    "@sudobility/components": "^5.0.27",
+    "@sudobility/design": "^1.1.24",
+    "@sudobility/di": "^1.5.49",
+    "@sudobility/di_web": "^0.1.135",
+    "@sudobility/subscription_lib": "^0.0.35",
+    "@sudobility/tapayoka_types": "^0.0.33",
+    "@sudobility/types": "^1.9.60",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "firebase": "^12.10.0",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
-    "@sudobility/auth_lib": "^0.0.62",
+    "@sudobility/auth_lib": "^0.0.63",
     "@sudobility/devops-components": "^2.0.17",
     "@sudobility/subscription-components": "^1.0.28",
     "@types/react": "^19.2.5",
@@ -56,5 +56,10 @@
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4",
     "vitest": "^4.0.16"
+  },
+  "license": "BUSL-1.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnqh/tapayoka_buyer_app.git"
   }
 }

@@ -14,3 +14,18 @@ export const getFirebaseService = () => ({
     setUserId: () => {},
   },
 });
+const noop = () => {};
+const noopAnalytics = {
+  trackEvent: noop,
+  trackPageView: noop,
+  trackButtonClick: noop,
+  trackLinkClick: noop,
+  trackError: noop,
+  trackScreenView: noop,
+  isEnabled: () => false,
+  setUserId: noop,
+  setUserProperties: noop,
+};
+export const getAnalyticsService = () => noopAnalytics;
+export const initializeFirebaseAnalytics = () => noopAnalytics;
+export const resetAnalyticsService = noop;

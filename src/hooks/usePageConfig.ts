@@ -44,4 +44,3 @@ export function useSetPageConfig(config: PageConfig) {
     return () => resetPageConfig();
   }, [configStr, setPageConfig, resetPageConfig]);
 }
-

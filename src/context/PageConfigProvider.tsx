@@ -18,4 +18,3 @@ export function PageConfigProvider({ children }: { children: ReactNode }) {
     </PageConfigContext.Provider>
   );
 }
-

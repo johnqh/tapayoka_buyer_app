@@ -1,8 +1,14 @@
+import { useEffect } from 'react';
 import { AppFooterForHomePage } from '@sudobility/building_blocks';
 import { ui } from '@sudobility/design';
 import { CONSTANTS } from '../config/constants';
+import { analyticsService } from '../config/analytics';
 
 export function LandingPage() {
+  useEffect(() => {
+    analyticsService.trackPageView('/landing', 'Landing Page');
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <header className="max-w-4xl mx-auto px-4 py-8">
@@ -17,12 +23,16 @@ export function LandingPage() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
           <a
             href="#"
+            onClick={() => analyticsService.trackButtonClick('download_ios', { platform: 'ios' })}
             className={`px-8 py-4 bg-black text-white rounded-xl text-lg font-medium hover:bg-gray-800 ${ui.transition.fast}`}
           >
             Download for iOS
           </a>
           <a
             href="#"
+            onClick={() =>
+              analyticsService.trackButtonClick('download_android', { platform: 'android' })
+            }
             className={`px-8 py-4 rounded-xl text-lg font-medium bg-green-600 text-white hover:bg-green-700 ${ui.transition.fast}`}
           >
             Download for Android
@@ -30,10 +40,16 @@ export function LandingPage() {
         </div>
         <section className={ui.layout.gridLg + ' pt-16'}>
           {[
-            { title: 'Scan', desc: `Point your camera at the QR code on any ${CONSTANTS.APP_NAME}-enabled device.` },
+            {
+              title: 'Scan',
+              desc: `Point your camera at the QR code on any ${CONSTANTS.APP_NAME}-enabled device.`,
+            },
             { title: 'Pay', desc: 'Securely pay with your card. No cash, no coins, no hassle.' },
-            { title: 'Activate', desc: 'The device starts automatically. Track time remaining in the app.' },
-          ].map(f => (
+            {
+              title: 'Activate',
+              desc: 'The device starts automatically. Track time remaining in the app.',
+            },
+          ].map((f) => (
             <div key={f.title} className={ui.card.bordered}>
               <h3 className={`${ui.text.h4} mb-2`}>{f.title}</h3>
               <p className={ui.text.body}>{f.desc}</p>
